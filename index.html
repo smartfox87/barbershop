@@ -8,9 +8,9 @@
   <title>Barbershop</title>
 </head>
 <body>
-  <header class="main-header">
+  <header class="index-header">
     <div class="container">
-      <nav class="main-menu">
+      <nav class="site-menu">
         <ul>
           <li>
             <a href="#">ГЛАВНАЯ</a>
@@ -32,13 +32,13 @@
           </li>
         </ul>
       </nav>
-      <div class="user-menu">
+      <div class="login-menu">
         <a href="#">ВХОД</a>
       </div>
     </div>
   </header>
   <main class="container">
-    <div class="main-logo">
+    <div class="index-logo">
       <img src="img/index-logo.png" width="" height="" alt="Барбершоп <<Бородинский>>">
       <section class="features">
         <div class="features-item">
@@ -54,26 +54,70 @@
           <p></p>
         </div>
       </section>
-      <div class="index-content">
-        <div class="index-content-left">
-          <h2 class="index-content-title">новости</h2>
-          <ul class="index-conten-news">
-            <li>
-              <p></p>
-              <time datetime="2016-12-16">16 декабря</time>
-            </li>
-            <li>
-              <p></p>
-              <time datetime="2016-12-23">23 декабря</time>
-            </li>
-          </ul>
-          <a class="btn" href="#">все новости</a>
+    </div>
+    <div class="index-content">
+      <div class="index-content-left">
+        <h2 class="index-content-title">новости</h2>
+        <ul class="index-conten-news">
+          <li>
+            <p></p>
+            <time datetime="2016-12-16">16 декабря</time>
+          </li>
+          <li>
+            <p></p>
+            <time datetime="2016-12-23">23 декабря</time>
+          </li>
+        </ul>
+        <a class="btn" href="#">все новости</a>
+      </div>
+      <div class="index-content-right">
+        <h2 class="index-content-title">фотогалерея</h2>
+        <div class="gallery-content">
+          <figure class="gallery">
+            <img src="" width="" height="" alt="">
+          </figure>
+          <button class="btn" class="btn-gallery-prev">назад</button>
+          <button class="btn" class="btn-gallery-next">вперед</button>
         </div>
       </div>
     </div>
+    <div class="index-content">
+      <div class="index-conten-left">
+        <h2 class="index-content-title">Контактная информация</h2>
+        <p></p>
+        <p></p>
+        <a class="btn" href="#">Как проехать</a>
+        <a class="btn" href="#">Обратная связь</a>
+      </div>
+      <div class="index-content-right">
+        <h2 class="index-content-title">Записаться</h2>
+        <p></p>
+        <form class="appointmen-form" action="index.html" method="post">
+          <input type="text" name="date" value="" placeholder="Дата">
+          <input type="text" name="time" value="">
+          <input type="text" name="name" value="">
+          <input type="tel" name="phone" value="">
+          <button type="submit" name="form-submit">Отправить</button>
+        </form>
+      </div>
+    </div>
   </main>
-  <footer>
+  <footer class="index-footer">
+    <div class="container">
+      <section class="footer-contacts">
 
+      </section>
+      <section class="footer-social">
+        <p></p>
+        <a class="social-btn social-btn-vk"href="#"></a>
+        <a class="social-btn social-btn-fb"href="#"></a>
+        <a class="social-btn social-btn-inst"href="#"></a>
+      </section>
+      <section class="copyright">
+        <p></p>
+        <a class="btn" href="#">SmartFox</a>
+      </section>
+    </div>
   </footer>
 </body>
 </html>
