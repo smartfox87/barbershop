@@ -3,9 +3,9 @@ body {
   line-height: 24px;
   font-family: "PT Sans Narrow" sans-serif;
   color: #fff;
-
+  background: src: "..\img\tint.jpg";
 }
 
 .container {
-  position: center;
+    color: #000000
 }
