@@ -1,11 +1,201 @@
+.clearfix::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
 body {
   font-size: 14px;
   line-height: 24px;
   font-family: "PT Sans Narrow" sans-serif;
   color: #fff;
-  background: src: "..\img\tint.jpg";
+  background: #000 url("../img/index_bg.jpg") no-repeat;
 }
 
+.site-header {
+    margin-bottom: 55px;
+    background: red;
+}
 .container {
-    color: #000000
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.site-menu {
+    float: left;
+    width: 780px;
+    min-height: 70px;
+    background: blue;
+}
+
+.user-menu {
+    float: right;
+    width: 140px;
+    min-height: 70px;
+}
+
+.breadcrumbs {
+    margin-bottom: 55px;
+    min-height: 75px;
+    background: red;
+}
+
+.index-logo {
+    height: 204px;
+    margin-bottom: 25px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.index-features {
+    margin-bottom: 80px;
+}
+
+.features-item {
+    float: left;
+    margin-right: 20px;
+    width: 300px;
+    min-height: 175px;
+}
+
+.features-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.index-content {
+    margin-bottom: 35px;
+    padding: 50px 80px 55px;
+    min-height: 325px;
+    background: white;
+    color: black;
+}
+
+.column-left {
+    float: left;
+    width: 380px;
+
+}
+
+.column-right {
+    float: right;
+    width: 300px;
+
+}
+
+.site-footer {
+    margin-top: 65px;
+    padding: 60px 0 40px;
+    background: red;
+}
+
+.footer-column {
+    margin-left: 60px;
+    min-height: 90px;
+}
+.footer-contacts {
+    float: left;
+    margin-left: 0;
+    width: 320px;
+}
+
+.footer-social {
+    float: left;
+}
+
+.footer-copyright {
+    float: right;
+    width: 140px;
+}
+
+.item-content {
+    background: blue;
+}
+
+.item-gallery {
+    float: left;
+    margin: 0;
+    width: 460px;
+    background: red;
+}
+
+.item-photo {
+    margin-bottom: 20px;
+}
+
+.item-preview img {
+    float: left;
+    margin-right: 20px;
+}
+
+.item-preview img:nth-child(3n) {
+    margin-right: 0;
+}
+
+.item-about {
+    float: right;
+    width: 390px;
+    background: red;
+}
+
+.price-phrasing {
+    min-height: 64px;
+    margin-bottom: 60px;
+    background: red;
+}
+
+.price-content {
+    margin-bottom: 65px;
+}
+
+.price-content:last-child {
+    margin-bottom: 75px;
+}
+
+.price-content-left {
+    float: left;
+    width: 460px;
+    background: red;
+}
+
+.price-content-right {
+    float: right;;
+    width: 460px;
+    background: red;
+}
+
+.shop-filters {
+    float: left;
+    width: 220px;
+}
+
+.shop-items {
+    float: right;
+    width: 700px;
+    background: red;
+}
+
+.shop-items-list {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 45px;
+    padding: 0;
+}
+
+.shop-item-cell {
+    float: left;
+    width: 220px;
+    background: gold;
+}
+
+.shop-list-number {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: white;
+}
+
+.shop-list-number a {
+    float: left;
+    width: 45px;
 }
