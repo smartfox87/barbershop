@@ -6,13 +6,13 @@
 
 body {
     min-width: 960px;
-    font-size: 14px;
-    line-height: 24px;
-    font-family: "PT Sans Narrow", "Arial", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
     background: #000 url("../img/index_bg.jpg") no-repeat center top;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    line-height: 24px;
 }
 
 .title-name {
@@ -24,19 +24,19 @@ body {
     display: inline-block;
     margin-right: 16px;
     padding: 10px 33px;
-    background-color: #000;
-    border: none;
     outline: none;
-    cursor: pointer;
+    border: none;
+    background-color: #000;
+    color: #fff;
     vertical-align: top;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
-    line-height: 24px;
-    font-family: "PT Sans Narrow", "Arial", sans-serif;
     font-weight: 700;
-    color: #fff;
+    font-size: 14px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    line-height: 24px;
+    cursor: pointer;
 }
 
 .btn:hover,
@@ -46,8 +46,8 @@ body {
 
 .btn.disabled,
 .btn:disabled {
-    cursor: default;
     opacity: 0.5;
+    cursor: default;
 }
 
 .btn.disabled:hover,
@@ -56,13 +56,14 @@ body {
 }
 
 .container {
-    width: 940px;
     margin: 0 auto;
     padding: 0 10px;
+    width: 940px;
     outlie: 1px solid white;
 }
 
-/*__________________________ШАПКА, ПОДВАЛ И МЕНЮ САЙТА_____________________*/
+
+/*__________________________ШАПКА, ПОДВАЛ И МЕНЮ САЙТА_______________________*/
 
 .site-header {
     margin-bottom: 55px;
@@ -88,10 +89,10 @@ body {
 .site-menu a {
     display: block;
     padding: 25px 20px;
+    color: #fff;
     text-decoration: none;
     font-size: 16px;
     line-height: 20px;
-    color: #fff;
 }
 
 .site-menu a:hover,
@@ -102,18 +103,18 @@ body {
 .user-menu {
     position: relative;
     float: right;
-    max-width: 140px;
     min-height: 70px;
+    max-width: 140px;
 }
 
 .login {
     display: inline-block;
     padding: 25px 20px;
     padding-left: 50px;
+    color: white;
     text-decoration: none;
     font-size: 16px;
     line-height: 20px;
-    color: white;
 }
 
 .login:hover,
@@ -122,16 +123,14 @@ body {
 }
 
 .login::before {
-    content: "";
     position: absolute;
-    left: 18px;
     top: 27px;
+    left: 18px;
     width: 18px;
     height: 16px;
     background: url("../img/sprites.png") no-repeat;
     background-position: -300px 0;
-	width: 18px;
-	height: 16px;
+    content: "";
     opacity: 0.3;
 }
 
@@ -162,14 +161,20 @@ body {
     color: #fff;
 }
 
+.footer-contacts a:hover {
+    text-decoration: none;
+}
+
 .footer-social {
     float: left;
     text-align: center;
+    font-size: 0;
 }
 
 .footer-social span {
     display: block;
     margin-bottom: 15px;
+    font-size: 14px;
 }
 
 .social-btn {
@@ -177,12 +182,12 @@ body {
     margin-right: 6px;
     width: 43px;
     height: 43px;
-    vertical-align: top;
     background: #000 url("../img/sprites.png") no-repeat;
+    vertical-align: top;
     font-size: 0;
 }
 
-.social-btn:last-child {
+.social-btn:nth-child(4n) {
     margin-right: 0;
 }
 
@@ -228,7 +233,6 @@ body {
     box-sizing: border-box;
     padding: 10px 5px;
     width: 100%;
-
 }
 
 .footer-copyright .btn:hover {
@@ -236,16 +240,17 @@ body {
     color: #000;
 }
 
-/*________________________________index.html________________________________*/
+
+/*_________________________________index.html________________________________*/
 
 .index-logo {
-    height: 204px;
     margin-bottom: 25px;
+    height: 204px;
+    text-align: center;
 }
 
 .index-logo img {
-    display: block;
-    margin: 0 auto;
+    vertical-align: top;
 }
 
 .index-features {
@@ -266,21 +271,21 @@ body {
 .features-item h2 {
     position: relative;
     margin: 0;
+    margin-bottom: 30px;
     padding: 0;
     padding-bottom: 40px;
-    margin-bottom: 30px;
 }
 
 .features-item h2::after {
-    content: "";
     position: absolute;
-    left: 50%;
     bottom: 0;
+    left: 50%;
     margin-left: -10px;
     width: 20px;
     height: 20px;
-    transform: rotate(45deg);
     background-color: #fff;
+    content: "";
+    transform: rotate(45deg);
 }
 
 .features-item p {
@@ -290,13 +295,9 @@ body {
 .index-content {
     margin-bottom: 30px;
     padding: 45px 80px 55px;
-    background:
-    url("../img/index_content_separator.png") no-repeat center,
-    url("../img/index_content_bg.jpg") no-repeat;
-    background-size:
-    auto,
-    cover;
+    background: url("../img/index_content_separator.png") no-repeat center, url("../img/index_content_bg.jpg") no-repeat;
     background-color: f8f5f2;
+    background-size: auto, cover;
     color: black;
 }
 
@@ -318,9 +319,11 @@ body {
     float: right;
     width: 300px;
 }
+
 .content-news {
     margin: 0;
-    margin-top: -10px;               /*pixel-perfect*/
+    margin-top: -10px;
+    /*pixel-perfect*/
     padding: 0;
     list-style: none;
 }
@@ -346,14 +349,14 @@ body {
 }
 
 .gallery-content .btn {
-    width: 140px;
     margin: 0;
+    width: 140px;
 }
 
 .gallery-content .prev {
     position: absolute;
-    left: 0;
     bottom: 0;
+    left: 0;
 }
 
 .gallery-content .next {
@@ -375,7 +378,8 @@ body {
 }
 
 .index-content-info p {
-    margin-top: -5px;                 /*pixel-perfect*/
+    margin-top: -5px;
+    /*pixel-perfect*/
 }
 
 .index-form {
@@ -389,15 +393,15 @@ body {
     margin-bottom: 20px;
     padding: 7px 15px;
     width: 106px;
-    background: #f9f6f3;
     outline: none;
     border: 2px solid #000;
-    font-size: 14px;
-    line-height: 24px;
-    font-family: "PT Sans Narrow", "Arial", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
+    background: #f9f6f3;
     color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    line-height: 24px;
 }
 
 .index-form input:nth-child(2n) {
@@ -414,10 +418,12 @@ body {
 }
 
 .index-content-info .btn {
-    margin-top: 10px;                   /*pixel-perfect*/
+    margin-top: 10px;
+    /*pixel-perfect*/
 }
 
-/*__________________________________item.html______________________________*/
+
+/*__________________________________item.html________________________________*/
 
 .item-content {
     background: blue;
@@ -430,12 +436,11 @@ body {
     background: red;
 }
 
-.item-preview {
-}
+.item-preview {}
 
 .item-preview img {
-    margin-right: 20px;
     margin-top: 20px;
+    margin-right: 20px;
     vertical-align: top;
 }
 
@@ -450,8 +455,8 @@ body {
 }
 
 .price-phrasing {
-    min-height: 64px;
     margin-bottom: 60px;
+    min-height: 64px;
     background: red;
 }
 
@@ -471,9 +476,9 @@ body {
 
 .price-content-right {
     float: right;
-    ;
     width: 460px;
     background: red;
+    ;
 }
 
 .shop-filters {
@@ -488,10 +493,10 @@ body {
 }
 
 .shop-items-list {
-    list-style: none;
     margin: 0;
     margin-bottom: 45px;
     padding: 0;
+    list-style: none;
 }
 
 .shop-item-cell {
@@ -503,8 +508,8 @@ body {
 .shop-list-number {
     margin: 0;
     padding: 0;
-    list-style: none;
     background: white;
+    list-style: none;
 }
 
 .shop-list-number a {
