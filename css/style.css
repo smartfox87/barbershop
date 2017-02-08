@@ -5,34 +5,139 @@
 }
 
 body {
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "PT Sans Narrow" sans-serif;
-  color: #fff;
-  background: #000 url("../img/index_bg.jpg") no-repeat;
+    min-width: 960px;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    background: #000 url("../img/index_bg.jpg") no-repeat center top;
 }
 
-.site-header {
-    margin-bottom: 55px;
-    background: red;
+.title-name {
+    font-size: 30px;
+    line-height: 42px;
 }
+
+.btn {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 33px;
+    background-color: #000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    vertical-align: top;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #663d15;
+}
+
+.btn.disabled,
+.btn:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+    background-color: #000;
+}
+
 .container {
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
+    outlie: 1px solid white;
+}
+
+/*__________________________ШАПКА, ПОДВАЛ И МЕНЮ САЙТА_____________________*/
+
+.site-header {
+    margin-bottom: 55px;
+    background: #000;
 }
 
 .site-menu {
     float: left;
-    width: 780px;
-    min-height: 70px;
-    background: blue;
+    max-width: 780px;
+}
+
+.site-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+.site-menu li {
+    display: inline-block;
+}
+
+.site-menu a {
+    display: block;
+    padding: 25px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.site-menu a:hover,
+.site-menu a:active {
+    background-color: #242424;
 }
 
 .user-menu {
+    position: relative;
     float: right;
-    width: 140px;
+    max-width: 140px;
     min-height: 70px;
+}
+
+.login {
+    display: inline-block;
+    padding: 25px 20px;
+    padding-left: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+}
+
+.login:hover,
+.login:active {
+    background-color: #242424;
+}
+
+.login::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 27px;
+    width: 18px;
+    height: 16px;
+    background: url("../img/sprites.png") no-repeat;
+    background-position: -300px 0;
+	width: 18px;
+	height: 16px;
+    opacity: 0.3;
+}
+
+.login:hover::before,
+.login:active::before {
+    opacity: 1;
 }
 
 .breadcrumbs {
@@ -41,72 +146,278 @@ body {
     background: red;
 }
 
-.index-logo {
-    height: 204px;
-    margin-bottom: 25px;
-    padding-top: 5px;
+.site-footer {
+    margin-top: 65px;
+    padding: 60px 0 40px;
+    background: #232323 url("../img/footer_bg.jpg");
+}
+
+.footer-contacts {
+    float: left;
+    margin-right: 80px;
+    width: 320px;
+}
+
+.footer-contacts a {
+    color: #fff;
+}
+
+.footer-social {
+    float: left;
     text-align: center;
 }
 
+.footer-social span {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.social-btn {
+    display: inline-block;
+    margin-right: 6px;
+    width: 43px;
+    height: 43px;
+    vertical-align: top;
+    background: #000 url("../img/sprites.png") no-repeat;
+    font-size: 0;
+}
+
+.social-btn:last-child {
+    margin-right: 0;
+}
+
+.social-btn-vk {
+    background-position: -242px 13px;
+}
+
+.social-btn-vk:hover {
+    background-color: #fff;
+    background-position: -92px 13px;
+}
+
+.social-btn-fb {
+    background-position: -135px 10px;
+}
+
+.social-btn-fb:hover {
+    background-color: #fff;
+    background-position: 15px 10px;
+}
+
+.social-btn-inst {
+    background-position: -187px 10px;
+}
+
+.social-btn-inst:hover {
+    background-color: #fff;
+    background-position: -37px 10px;
+}
+
+.footer-copyright {
+    float: right;
+    width: 140px;
+    text-align: center;
+}
+
+.footer-copyright span {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-copyright .btn {
+    box-sizing: border-box;
+    padding: 10px 5px;
+    width: 100%;
+
+}
+
+.footer-copyright .btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/*________________________________index.html________________________________*/
+
+.index-logo {
+    height: 204px;
+    margin-bottom: 25px;
+}
+
+.index-logo img {
+    display: block;
+    margin: 0 auto;
+}
+
 .index-features {
-    margin-bottom: 80px;
+    margin-bottom: 65px;
 }
 
 .features-item {
     float: left;
     margin-right: 20px;
     width: 300px;
-    min-height: 175px;
+    text-align: center;
 }
 
 .features-item:nth-child(3n) {
     margin-right: 0;
 }
 
+.features-item h2 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+}
+
+.features-item h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -10px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: #fff;
+}
+
+.features-item p {
+    padding: 0 10px;
+}
+
 .index-content {
-    margin-bottom: 35px;
-    padding: 50px 80px 55px;
-    min-height: 325px;
-    background: white;
+    margin-bottom: 30px;
+    padding: 45px 80px 55px;
+    background:
+    url("../img/index_content_separator.png") no-repeat center,
+    url("../img/index_content_bg.jpg") no-repeat;
+    background-size:
+    auto,
+    cover;
+    background-color: f8f5f2;
     color: black;
+}
+
+.index-content h2 {
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.index-content p {
+    margin-bottom: 30px;
 }
 
 .column-left {
     float: left;
     width: 380px;
-
 }
 
 .column-right {
     float: right;
     width: 300px;
-
+}
+.content-news {
+    margin: 0;
+    margin-top: -10px;               /*pixel-perfect*/
+    padding: 0;
+    list-style: none;
 }
 
-.site-footer {
-    margin-top: 65px;
-    padding: 60px 0 40px;
-    background: red;
+.content-news li {
+    margin-bottom: 28px;
 }
 
-.footer-column {
-    margin-left: 60px;
-    min-height: 90px;
-}
-.footer-contacts {
-    float: left;
-    margin-left: 0;
-    width: 320px;
+.content-news time {
+    font-weight: 400;
 }
 
-.footer-social {
-    float: left;
+.content-news p {
+    margin: 0;
+    padding: 0;
+    padding-right: 75px;
 }
 
-.footer-copyright {
-    float: right;
+.gallery-content {
+    position: relative;
+    height: 260px;
+    font-size: 0;
+}
+
+.gallery-content .btn {
     width: 140px;
+    margin: 0;
 }
+
+.gallery-content .prev {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.gallery-content .next {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.gallery {
+    margin: 0;
+    border: 7px solid #fff;
+    background-color: #ccc;
+}
+
+.gallery img {
+    width: 286px;
+    height: 164px;
+    vertical-align: top;
+}
+
+.index-content-info p {
+    margin-top: -5px;                 /*pixel-perfect*/
+}
+
+.index-form {
+    margin: 0;
+    padding: 0;
+}
+
+.index-form input {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 7px 15px;
+    width: 106px;
+    background: #f9f6f3;
+    outline: none;
+    border: 2px solid #000;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.index-form input:nth-child(2n) {
+    margin-right: 0;
+}
+
+.index-form input:focus {
+    border-color: #663d15;
+}
+
+.index-form .btn {
+    clear: both;
+    width: 100%;
+}
+
+.index-content-info .btn {
+    margin-top: 10px;                   /*pixel-perfect*/
+}
+
+/*__________________________________item.html______________________________*/
 
 .item-content {
     background: blue;
@@ -119,13 +430,13 @@ body {
     background: red;
 }
 
-.item-photo {
-    margin-bottom: 20px;
+.item-preview {
 }
 
 .item-preview img {
-    float: left;
     margin-right: 20px;
+    margin-top: 20px;
+    vertical-align: top;
 }
 
 .item-preview img:nth-child(3n) {
@@ -159,7 +470,8 @@ body {
 }
 
 .price-content-right {
-    float: right;;
+    float: right;
+    ;
     width: 460px;
     background: red;
 }
