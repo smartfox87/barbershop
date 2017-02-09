@@ -189,10 +189,10 @@ body {
 }
 
 .breadcrumbs {
-    margin-bottom: 40px;
+    margin-bottom: 53px;
 }
 
-.breadcrumbs .title-name {
+.breadcrumbs h1 {
     margin: 0;
     margin-bottom: 15px;
     padding: 0;
@@ -526,33 +526,84 @@ body {
 
 /*__________________________________item.html________________________________*/
 
-.item-content {
-    background: blue;
-}
-
-.item-gallery {
-    float: left;
-    margin: 0;
+.item-photo {
     width: 460px;
-    background: red;
+    height: 498px;
+    background: #ccc;
 }
 
-.item-preview {}
+.item-photo img {
+    box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+}
 
-.item-preview img {
+.item-preview {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+.item-preview li {
+    display: inline-block;
     margin-top: 20px;
     margin-right: 20px;
+    width: 140px;
+    height: 149px;
+    background: #ccc;
     vertical-align: top;
+    cursor: pointer;
 }
 
-.item-preview img:nth-child(3n) {
+.item-preview li:nth-child(3n) {
     margin-right: 0;
 }
 
-.item-about {
+.item-preview img {
+    box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.indent-left {
+    box-sizing: border-box;
+    padding-left: 70px;
+}
+
+.item-info span {
+    padding: 18px 10px 29px 0;
+}
+
+.availability {
+    float: left;
+}
+
+.vendor-code {
     float: right;
-    width: 390px;
-    background: red;
+    color: #aeaeae;
+}
+
+.item-price {
+    margin: 36px 0 62px;
+    font-size: 0;
+}
+
+.item-price span {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #e5e5e5;
+    font-size: 14px;
+}
+
+.item-price .btn-buy {
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.inner-list .item-li {
+    margin-bottom: 0;
+}
+
+.site-footer-item {
+    margin-top: 47px;
 }
 
 
@@ -561,6 +612,7 @@ body {
 .price-phrasing {
     position: relative;
     z-index: 1;
+    margin-top: -13px;
     text-align: center;
     font-size: 48px;
     line-height: 60px;
@@ -587,26 +639,25 @@ body {
 .inner-content h2 {
     margin: 56px 0 29px;
     padding: 0;
-    width: 240px;
 }
 
-.inner-list-used {
+.inner-list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.inner-list-used li {
+.inner-list li {
     position: relative;
     margin-bottom: 13px;
     padding-left: 20px;
 }
 
-.inner-list-used li:last-child {
+.inner-list li:last-child {
     margin-bottom: 0;
 }
 
-.inner-list-used li::before {
+.inner-list li::before {
     position: absolute;
     top: 8px;
     left: 2px;
@@ -623,8 +674,6 @@ body {
 }
 
 .inner-table-cost caption {
-    display: block;
-    width: 70px;
     text-align: left;
 }
 
@@ -647,6 +696,9 @@ body {
 .inner-content p {
     margin: 0;
     padding: 0;
+}
+
+.inner-content .short-text {
     padding-right: 75px;
 }
 
