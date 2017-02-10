@@ -581,21 +581,33 @@ body {
 }
 
 .item-price {
+    width: 187px;
+}
+
+.inner-item-cost {
     margin: 36px 0 62px;
-    font-size: 0;
 }
 
 .item-price span {
-    display: inline-block;
-    padding: 10px 30px;
+    box-sizing: border-box;
+    width: 109px;
+    min-height: 43px;
+    float: left;
+    text-align: center;
+    display: block;
+    padding: 11px 10px;
     background: #e5e5e5;
-    font-size: 14px;
 }
 
 .item-price .btn-buy {
-    padding-right: 20px;
-    padding-left: 20px;
-    font-size: 14px;
+    min-height: 43px;
+    float: right;
+    margin: 0;
+    box-sizing: border-box;
+    width: 78px;
+    padding: 9px;
+    text-align: center;
+    color: #fff;
 }
 
 .inner-list .item-li {
@@ -712,38 +724,190 @@ body {
     width: 460px;
 }
 
+/*_________________________________shop.html__________________________________*/
+
 .shop-filters {
     float: left;
     width: 220px;
 }
 
+.shop-filters-form {
+    margin: 0;
+    margin-top: -7px;
+    padding: 0;
+    line-height: 21px;
+}
+
+.shop-filters-form fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    margin-bottom: 32px;
+}
+
+.shop-filters-form legend {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 27px;
+}
+
+.shop-filters-form input {
+    display: none;
+}
+
+.shop-filters-form label {
+    display: block;
+    margin-bottom: 16px;
+    padding-left: 44px;
+    position: relative;
+}
+
+.shop-filters-form .check-indicator {
+    position: absolute;
+}
+
+.filter-producers .check-indicator {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    left: 0;
+    top: 0;
+}
+
+.filter-producers .check-indicator::before {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background: #000;
+    top: 7px;
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.filter-producers .check-indicator::after {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background: #000;
+    top: 7px;
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.filter-producers input:checked+.check-indicator::after,
+.filter-producers input:checked+.check-indicator::before {
+    display: block;
+}
+
+.filter-groups .check-indicator {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+}
+
+.filter-groups .check-indicator::after {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #000;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
+}
+
+.filter-groups input:checked+.check-indicator::after {
+    display: block;
+}
+
 .shop-items {
     float: right;
     width: 700px;
-    background: red;
 }
 
 .shop-items-list {
+    font-size: 0;
     margin: 0;
-    margin-bottom: 45px;
+    margin-bottom: 24px;
     padding: 0;
     list-style: none;
 }
 
 .shop-item-cell {
-    float: left;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
     width: 220px;
-    background: gold;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+    line-height: 19px;
+    background: #fff;
+}
+
+.shop-item-cell:nth-child(3n) {
+    margin-right: 0;
+}
+
+.shop-item-cell a {
+    color: #000;
+    text-decoration: none;
+}
+
+.shop-item-cell a:first-child {
+    text-transform: none;
+}
+
+.shop-items-name {
+    margin: 6px  17px;
+}
+
+.shop-items-price {
+    margin: 17px;
+    margin-top: 13px;
 }
 
 .shop-list-number {
     margin: 0;
     padding: 0;
-    background: white;
     list-style: none;
 }
 
-.shop-list-number a {
+.shop-list-number a,
+.shop-list-number span {
+    box-sizing: border-box;
+    padding: 10px 10px;
+    display: block;
+    min-width: 43px;
+    line-height: 20px;
+    height: 43px;
     float: left;
-    width: 45px;
+    margin-right: 7px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.shop-list-number a:hover {
+    background: #663d15;
+}
+
+.shop-list-number span {
+    background: #fff;
+    color: #000;
 }
