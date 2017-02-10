@@ -589,25 +589,25 @@ body {
 }
 
 .item-price span {
-    box-sizing: border-box;
-    width: 109px;
-    min-height: 43px;
-    float: left;
-    text-align: center;
     display: block;
+    float: left;
+    box-sizing: border-box;
     padding: 11px 10px;
+    min-height: 43px;
+    width: 109px;
     background: #e5e5e5;
+    text-align: center;
 }
 
 .item-price .btn-buy {
-    min-height: 43px;
     float: right;
-    margin: 0;
     box-sizing: border-box;
-    width: 78px;
+    margin: 0;
     padding: 9px;
-    text-align: center;
+    min-height: 43px;
+    width: 78px;
     color: #fff;
+    text-align: center;
 }
 
 .inner-list .item-li {
@@ -724,6 +724,7 @@ body {
     width: 460px;
 }
 
+
 /*_________________________________shop.html__________________________________*/
 
 .shop-filters {
@@ -740,15 +741,15 @@ body {
 
 .shop-filters-form fieldset {
     margin: 0;
+    margin-bottom: 32px;
     padding: 0;
     border: none;
-    margin-bottom: 32px;
 }
 
 .shop-filters-form legend {
     margin: 0;
-    padding: 0;
     margin-bottom: 27px;
+    padding: 0;
 }
 
 .shop-filters-form input {
@@ -756,10 +757,10 @@ body {
 }
 
 .shop-filters-form label {
+    position: relative;
     display: block;
     margin-bottom: 16px;
     padding-left: 44px;
-    position: relative;
 }
 
 .shop-filters-form .check-indicator {
@@ -767,37 +768,37 @@ body {
 }
 
 .filter-producers .check-indicator {
-    content: "";
-    display: block;
     position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
     width: 16px;
     height: 16px;
     border: 2px solid #000;
-    left: 0;
-    top: 0;
+    content: "";
 }
 
 .filter-producers .check-indicator::before {
-    content: "";
-    display: none;
     position: absolute;
+    top: 7px;
+    left: 0;
+    display: none;
     width: 16px;
     height: 2px;
     background: #000;
-    top: 7px;
-    left: 0;
+    content: "";
     transform: rotate(45deg);
 }
 
 .filter-producers .check-indicator::after {
-    content: "";
-    display: none;
     position: absolute;
+    top: 7px;
+    left: 0;
+    display: none;
     width: 16px;
     height: 2px;
     background: #000;
-    top: 7px;
-    left: 0;
+    content: "";
     transform: rotate(-45deg);
 }
 
@@ -807,27 +808,27 @@ body {
 }
 
 .filter-groups .check-indicator {
-    content: "";
-    display: block;
     position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
     width: 16px;
     height: 16px;
     border: 2px solid #000;
-    left: 0;
-    top: 0;
     border-radius: 50%;
+    content: "";
 }
 
 .filter-groups .check-indicator::after {
-    content: "";
-    display: none;
     position: absolute;
+    top: 4px;
+    left: 4px;
+    display: none;
     width: 8px;
     height: 8px;
-    background: #000;
-    left: 4px;
-    top: 4px;
     border-radius: 50%;
+    background: #000;
+    content: "";
 }
 
 .filter-groups input:checked+.check-indicator::after {
@@ -840,23 +841,23 @@ body {
 }
 
 .shop-items-list {
-    font-size: 0;
     margin: 0;
     margin-bottom: 24px;
     padding: 0;
     list-style: none;
+    font-size: 0;
 }
 
 .shop-item-cell {
     display: inline-block;
-    vertical-align: top;
-    font-size: 14px;
-    width: 220px;
     margin-right: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
-    line-height: 19px;
+    width: 220px;
     background: #fff;
+    box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 19px;
 }
 
 .shop-item-cell:nth-child(3n) {
@@ -873,7 +874,7 @@ body {
 }
 
 .shop-items-name {
-    margin: 6px  17px;
+    margin: 6px 17px;
 }
 
 .shop-items-price {
@@ -889,18 +890,18 @@ body {
 
 .shop-list-number a,
 .shop-list-number span {
-    box-sizing: border-box;
-    padding: 10px 10px;
     display: block;
-    min-width: 43px;
-    line-height: 20px;
-    height: 43px;
     float: left;
+    box-sizing: border-box;
     margin-right: 7px;
+    padding: 10px 10px;
+    min-width: 43px;
+    height: 43px;
     background: #000;
     color: #fff;
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
+    line-height: 20px;
 }
 
 .shop-list-number a:hover {
