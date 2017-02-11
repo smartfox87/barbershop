@@ -54,18 +54,18 @@
             <form class="shop-filters-form" action="index.html" method="post">
                 <fieldset class="filter-producers">
                     <legend class="content-name">производители:</legend>
-                    <label><input type="checkbox" name="1" value="" checked><span class="check-indicator"></span>baxter of california</label>
-                    <label><input type="checkbox" name="2" value=""><span class="check-indicator"></span>mr natty</label>
-                    <label ><input type="checkbox" name="3" value="" checked><span class="check-indicator"></span>suavecito</label>
-                    <label ><input type="checkbox" name="4" value=""><span class="check-indicator"></span>malin+goetz</label>
-                    <label ><input type="checkbox" name="5" value=""><span class="check-indicator"></span>murray's</label>
-                    <label ><input type="checkbox" name="6" value="" checked><span class="check-indicator"></span>american crew</label>
+                    <label><input type="checkbox" name="1" value="" checked><span class="check-indicator-checkbox"></span>baxter of california</label>
+                    <label><input type="checkbox" name="2" value=""><span class="check-indicator-checkbox"></span>mr natty</label>
+                    <label ><input type="checkbox" name="3" value="" checked><span class="check-indicator-checkbox"></span>suavecito</label>
+                    <label ><input type="checkbox" name="4" value=""><span class="check-indicator-checkbox"></span>malin+goetz</label>
+                    <label ><input type="checkbox" name="5" value=""><span class="check-indicator-checkbox"></span>murray's</label>
+                    <label ><input type="checkbox" name="6" value="" checked><span class="check-indicator-checkbox"></span>american crew</label>
                 </fieldset>
                 <fieldset class="filter-groups">
                     <legend class="content-name">группы товаров:</legend>
-                    <label><input type="radio" name="filter-groups" value=""><span class="check-indicator"></span>бритвенные принадлежности</label>
-                    <label><input type="radio" name="filter-groups" value="" checked><span class="check-indicator"></span>средства для ухода</label>
-                    <label><input type="radio" name="filter-groups" value=""><span class="check-indicator"></span>аксессуары</label>
+                    <label><input type="radio" name="filter-groups" value=""><span class="check-indicator-radio"></span>бритвенные принадлежности</label>
+                    <label><input type="radio" name="filter-groups" value="" checked><span class="check-indicator-radio"></span>средства для ухода</label>
+                    <label><input type="radio" name="filter-groups" value=""><span class="check-indicator-radio"></span>аксессуары</label>
                 </fieldset>
                 <button class="btn" type="submit" name="button" value="показать">показать</button>
             </form>
@@ -162,7 +162,7 @@
     <footer class="site-footer site-footer-item">
         <div class="container clearfix">
             <div class="footer-contacts">
-                БАРБЕРШОП «БОРОДИНСКИЙ»<br>АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br><a href="">КАК НАС НАЙТИ?</a><br>ТЕЛЕФОН: +7 (495) 666-02-66
+                БАРБЕРШОП «БОРОДИНСКИЙ»<br>АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br><a class="open-map" href="#">КАК НАС НАЙТИ?</a><br>ТЕЛЕФОН: +7 (495) 666-02-66
             </div>
             <div class="footer-social">
                 <span>давайте дружить!</span>
@@ -176,6 +176,30 @@
             </div>
         </div>
     </footer>
+    <div class="modal-content">
+        <button class="modal-content-close" type="button" name="button">закрыть</button>
+        <h2 class="title-name">личный кабинет</h2>
+        <p>введите пожалуйста свой логин и пароль</p>
+        <form class="modal-content-form" action="index.html" method="post">
+            <input class="icon-login" type="text" name="login" value="" placeholder="логин">
+            <input class="icon-password" type="password" name="password" value="" placeholder="пароль">
+            <div class="modal-content-forget-block clearfix">
+                <label class="modal-content-forget"><input type="checkbox" name="" value=""><span class="check-indicator-checkbox"></span>запомнить меня</label>
+                <a href="#">я забыл пароль!</a>
+            </div>
+            <button class="btn modal-content-submit" type="submit" name="button">войти</button>
+        </form>
+    </div>
+    <div class="modal-map">
+        <button class="modal-content-close modal-map-close" type="button" name="button">закрыть</button>
+        <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651625!2d30.3208946169043!3d59.93879418187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1486830077928" width="766" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="modal-overlay">
+    </div>
+    <script src="js/script.js">
+    </script>
 </body>
 
 </html>

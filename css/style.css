@@ -20,6 +20,13 @@ body {
     color: #000;
 }
 
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 940px;
+    outlie: 1px solid white;
+}
+
 .title-name {
     font-size: 30px;
     line-height: 42px;
@@ -64,13 +71,69 @@ body {
     background-color: #000;
 }
 
-.container {
-    margin: 0 auto;
-    padding: 0 10px;
-    width: 940px;
-    outlie: 1px solid white;
+.check-indicator-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    content: "";
 }
 
+.check-indicator-checkbox::before,
+.check-indicator-checkbox::after {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    display: none;
+    width: 16px;
+    height: 2px;
+    background: #000;
+    content: "";
+}
+
+.check-indicator-checkbox::before {
+    transform: rotate(45deg);
+}
+
+.check-indicator-checkbox::after {
+    transform: rotate(-45deg);
+}
+
+input:checked+.check-indicator-checkbox::after,
+input:checked+.check-indicator-checkbox::before {
+    display: block;
+}
+
+.check-indicator-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    content: "";
+}
+
+.check-indicator-radio::after {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+    content: "";
+}
+
+input:checked+.check-indicator-radio::after {
+    display: block;
+}
 
 /*__________________________ШАПКА, ПОДВАЛ И МЕНЮ САЙТА_______________________*/
 
@@ -179,7 +242,7 @@ body {
     width: 18px;
     height: 16px;
     background: url("../img/sprites.png") no-repeat;
-    background-position: -300px 0;
+    background-position: 0 -300px;
     content: "";
     opacity: 0.3;
 }
@@ -283,6 +346,7 @@ body {
     margin-right: 6px;
     width: 43px;
     height: 43px;
+    transition-duration: 0.2s;
     background: #000 url("../img/sprites.png") no-repeat;
     vertical-align: top;
     font-size: 0;
@@ -293,30 +357,30 @@ body {
 }
 
 .social-btn-vk {
-    background-position: -242px 13px;
+    background-position: 8px 13px;
 }
 
 .social-btn-vk:hover {
     background-color: #fff;
-    background-position: -92px 13px;
+    background-position: 8px -37px;
 }
 
 .social-btn-fb {
-    background-position: -135px 10px;
+    background-position: 15px -90px;
 }
 
 .social-btn-fb:hover {
     background-color: #fff;
-    background-position: 15px 10px;
+    background-position: 15px -140px;
 }
 
 .social-btn-inst {
-    background-position: -187px 10px;
+    background-position: 12px -190px;
 }
 
 .social-btn-inst:hover {
     background-color: #fff;
-    background-position: -37px 10px;
+    background-position: 12px -240px;
 }
 
 .footer-copyright {
@@ -341,6 +405,173 @@ body {
     color: #000;
 }
 
+.modal-content {
+    position: fixed;
+    left: 50%;
+    top: 120px;
+    z-index: 30;
+    display: none;
+    margin-left: -230px;
+    padding: 50px 80px;
+    width: 300px;
+    min-height: 285px;
+    box-shadow: 0 30px 50px 0 rgba(0, 1, 1, 0.75);
+    background: #f8f5f2 url("../img/inner_bg.jpg");
+    color: #000;
+}
+
+.modal-content-show {
+    display: block;
+}
+
+.modal-content-close {
+    position: absolute;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    right: -35px;
+    top: 9px;
+    width: 22px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.modal-content-close::before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    display: block;
+    width: 24px;
+    height: 5px;
+    background: #ccc;
+    content: "";
+    transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    display: block;
+    width: 24px;
+    height: 5px;
+    background: #ccc;
+    content: "";
+    transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+    margin: 0;
+    padding: 0;
+    margin-top: -5px;
+}
+
+.modal-content-form {
+    margin: 0;
+    margin-top: -2px;
+    padding: 0;
+}
+
+.modal-content-form input[type="text"],
+.modal-content-form input[type="password"] {
+    box-sizing: border-box;
+    padding: 9px 40px 9px 15px;
+    width: 100%;
+    border: 2px solid #000;
+    margin-bottom: 9px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.modal-content-form input:focus {
+    border-color: #663d15;
+}
+
+.modal-content-form .icon-login {
+    background: #f9f6f3 url("../img/sprites.png") no-repeat 268px -336px;
+}
+
+.modal-content-form .icon-password {
+    background: #f9f6f3 url("../img/sprites.png") no-repeat 268px -389px;
+}
+
+.modal-content-forget-block {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.modal-content-forget {
+    position: relative;
+    float: left;
+    padding-left: 32px;
+}
+
+.modal-content-forget .check-indicator-checkbox {
+    top: 2px;
+}
+
+.modal-content-forget input {
+    display: none;
+}
+
+.modal-content-forget-block a {
+    float: right;
+    color: #000;
+}
+
+.modal-content-forget-block a:hover {
+    text-decoration: none;
+}
+
+.modal-content-submit {
+    width: 100%;
+}
+
+.modal-map {
+    position: fixed;
+    left: 50%;
+    top: 595px;
+    z-index: 30;
+    display: none;
+    margin-left: -390px;
+    box-sizing: border-box;
+    width: 780px;
+    height: 575px;
+    border: 7px solid #fff;
+    box-shadow: 0 30px 50px 0 rgba(0, 1, 1, 0.75);
+    background: #ccc url("../img/map.jpg") no-repeat center;
+}
+
+.modal-map-show {
+    display: block;
+}
+
+.modal-map .modal-map-close {
+    top: -2px;
+    right: -37px;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-overlay-show {
+    display: block;
+}
 
 /*_________________________________index.html________________________________*/
 
@@ -761,78 +992,6 @@ body {
     display: block;
     margin-bottom: 16px;
     padding-left: 44px;
-}
-
-.shop-filters-form .check-indicator {
-    position: absolute;
-}
-
-.filter-producers .check-indicator {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #000;
-    content: "";
-}
-
-.filter-producers .check-indicator::before {
-    position: absolute;
-    top: 7px;
-    left: 0;
-    display: none;
-    width: 16px;
-    height: 2px;
-    background: #000;
-    content: "";
-    transform: rotate(45deg);
-}
-
-.filter-producers .check-indicator::after {
-    position: absolute;
-    top: 7px;
-    left: 0;
-    display: none;
-    width: 16px;
-    height: 2px;
-    background: #000;
-    content: "";
-    transform: rotate(-45deg);
-}
-
-.filter-producers input:checked+.check-indicator::after,
-.filter-producers input:checked+.check-indicator::before {
-    display: block;
-}
-
-.filter-groups .check-indicator {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #000;
-    border-radius: 50%;
-    content: "";
-}
-
-.filter-groups .check-indicator::after {
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    display: none;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #000;
-    content: "";
-}
-
-.filter-groups input:checked+.check-indicator::after {
-    display: block;
 }
 
 .shop-items {
