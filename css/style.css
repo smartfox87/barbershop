@@ -135,7 +135,32 @@ input:checked+.check-indicator-radio::after {
     display: block;
 }
 
-/*__________________________ШАПКА, ПОДВАЛ И МЕНЮ САЙТА_______________________*/
+@keyframes popup-up {
+    0% {
+        transform: translateY(-390px);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes popup-left {
+    0% {
+        transform: translateX(-780px);
+    }
+    75% {
+        transform: translateX(40px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*__________________________________________ШАПКА, ПОДВАЛ И МЕНЮ САЙТА______________________________________*/
 
 .site-header {
     margin-bottom: 55px;
@@ -178,6 +203,10 @@ input:checked+.check-indicator-radio::after {
     line-height: 20px;
 }
 
+.site-menu a:hover {
+    background-color: #242424;
+}
+
 .active {
     position: relative;
 }
@@ -201,8 +230,8 @@ input:checked+.check-indicator-radio::after {
     line-height: 20px;
 }
 
-.site-menu a:hover {
-    background-color: #242424;
+.active span:hover {
+    cursor: default;
 }
 
 .site-menu .logo-menu {
@@ -422,6 +451,9 @@ input:checked+.check-indicator-radio::after {
 
 .modal-content-show {
     display: block;
+    animation-name: popup-up;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
 }
 
 .modal-content-close {
@@ -551,6 +583,9 @@ input:checked+.check-indicator-radio::after {
 
 .modal-map-show {
     display: block;
+    animation-name: popup-left;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
 }
 
 .modal-map .modal-map-close {
@@ -573,7 +608,7 @@ input:checked+.check-indicator-radio::after {
     display: block;
 }
 
-/*_________________________________index.html________________________________*/
+/*__________________________________________________index.html_____________________________________________*/
 
 .index-logo {
     margin-bottom: 25px;
@@ -627,7 +662,8 @@ input:checked+.check-indicator-radio::after {
 .index-content {
     margin-bottom: 30px;
     padding: 45px 80px 55px;
-    background: url("../img/index_content_separator.png") no-repeat center, url("../img/index_content_bg.jpg") no-repeat;
+    background: url("../img/index_content_separator.png") no-repeat center,
+    url("../img/index_content_bg.jpg") no-repeat;
     background-color: #f8f5f2;
     background-size: auto, cover;
     color: black;
@@ -755,7 +791,7 @@ input:checked+.check-indicator-radio::after {
 }
 
 
-/*__________________________________item.html________________________________*/
+/*________________________________________________item.html_____________________________________________*/
 
 .item-photo {
     width: 460px;
@@ -828,6 +864,7 @@ input:checked+.check-indicator-radio::after {
     width: 109px;
     background: #e5e5e5;
     text-align: center;
+    line-height: 21px;
 }
 
 .item-price .btn-buy {
@@ -850,7 +887,7 @@ input:checked+.check-indicator-radio::after {
 }
 
 
-/*__________________________________price.html_______________________________*/
+/*__________________________________________________price.html____________________________________________*/
 
 .price-phrasing {
     position: relative;
@@ -956,7 +993,7 @@ input:checked+.check-indicator-radio::after {
 }
 
 
-/*_________________________________shop.html__________________________________*/
+/*________________________________________________shop.html_______________________________________________*/
 
 .shop-filters {
     float: left;
@@ -1070,4 +1107,8 @@ input:checked+.check-indicator-radio::after {
 .shop-list-number span {
     background: #fff;
     color: #000;
+}
+
+.shop-list-number span:hover {
+    cursor: default;
 }
