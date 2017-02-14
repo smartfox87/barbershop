@@ -96,7 +96,7 @@
     <footer class="site-footer site-footer-inner">
         <div class="container clearfix">
             <div class="footer-contacts">
-                БАРБЕРШОП «БОРОДИНСКИЙ»<br>АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br><a class="open-map" href="#">КАК НАС НАЙТИ?</a><br>ТЕЛЕФОН: +7 (495) 666-02-66
+                БАРБЕРШОП «БОРОДИНСКИЙ»<br>АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br><a class="open-map-footer" href="#">КАК НАС НАЙТИ?</a><br>ТЕЛЕФОН: +7 (495) 666-02-66
             </div>
             <div class="footer-social">
                 <span>давайте дружить!</span>
@@ -115,8 +115,8 @@
         <h2 class="title-name">личный кабинет</h2>
         <p>введите пожалуйста свой логин и пароль</p>
         <form class="modal-content-form" action="index.html" method="post">
-            <input class="icon-login" type="text" name="login" value="" placeholder="логин">
-            <input class="icon-password" type="password" name="password" value="" placeholder="пароль">
+            <input class="icon-login" type="text" name="login" value="" placeholder="логин" required>
+            <input class="icon-password" type="password" name="password" value="" placeholder="пароль" required>
             <div class="modal-content-forget-block clearfix">
                 <label class="modal-content-forget"><input type="checkbox" name="" value=""><span class="check-indicator-checkbox"></span>запомнить меня</label>
                 <a href="#">я забыл пароль!</a>
@@ -132,7 +132,7 @@
     </div>
     <div class="modal-overlay">
     </div>
-    <script src="js/script.js">
+    <script defer src="js/script.js">
     </script>
 </body>
 
