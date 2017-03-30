@@ -24,7 +24,6 @@ body {
     margin: 0 auto;
     padding: 0 10px;
     width: 940px;
-    outlie: 1px solid white;
 }
 
 .title-name {
@@ -135,7 +134,7 @@ input:checked+.check-indicator-radio::after {
     display: block;
 }
 
-/*__________________________ШАПКА, ПОДВАЛ И МЕНЮ САЙТА_______________________*/
+/*________________________________________ШАПКА, ПОДВАЛ И МЕНЮ САЙТА________________________________________*/
 
 .site-header {
     margin-bottom: 55px;
