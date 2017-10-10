@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Главная</title>
 </head>
 
@@ -116,7 +115,7 @@
             </div>
             <div class="footer-copyright">
                 <span>разработано:</span>
-                <a class="btn" href="#">htmlacademy.ru</a>
+                <a class="btn" href="#">smartfox87</a>
             </div>
         </div>
     </footer>
@@ -125,8 +124,8 @@
         <h2 class="title-name">личный кабинет</h2>
         <p>введите пожалуйста свой логин и пароль</p>
         <form class="modal-content-form" action="index.html" method="post">
-            <input class="icon-login" type="text" name="login" value="" placeholder="логин">
-            <input class="icon-password" type="password" name="password" value="" placeholder="пароль">
+            <input class="icon-login" type="text" name="login" value="" placeholder="логин" required>
+            <input class="icon-password" type="password" name="password" value="" placeholder="пароль" required>
             <div class="modal-content-forget-block clearfix">
                 <label class="modal-content-forget"><input type="checkbox" name="" value=""><span class="check-indicator-checkbox"></span>запомнить меня</label>
                 <a href="#">я забыл пароль!</a>
@@ -142,8 +141,7 @@
     </div>
     <div class="modal-overlay">
     </div>
-    <script src="js/script.js">
-    </script>
+    <script defer src="js/script.min.js"></script>
 </body>
 
 </html>
